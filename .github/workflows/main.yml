@@ -1,0 +1,123 @@
+name: Create Daily JS with Random Code
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight UTC
+  workflow_dispatch:
+
+jobs:
+  create-script:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate daily script with random code
+        run: |
+          FILENAME="script-$(date '+%Y-%m-%d').js"
+
+          # Define an array of different code snippets
+          declare -a CODE_SNIPPETS=(
+            "// Snippet 1: A simple greeting
+            console.log('Hello there! This is a random greeting script.');
+            const user = 'Developer';
+            console.log(\`Welcome, \${user}!\`);"
+
+            "// Snippet 2: A simple number guessing game
+            const targetNumber = Math.floor(Math.random() * 10) + 1;
+            console.log(\`Guess a number between 1 and 10. The answer is \${targetNumber}.\`);"
+
+            "// Snippet 3: Fetch a random fact
+            fetch('https://catfact.ninja/fact')
+              .then(response => response.json())
+              .then(data => console.log('Random Cat Fact:', data.fact))
+              .catch(error => console.error('Error fetching fact:', error));"
+
+            "// Snippet 4: Array manipulation
+            const numbers = [1, 2, 3, 4, 5];
+            const doubled = numbers.map(n => n * 2);
+            console.log('Original:', numbers);
+            console.log('Doubled:', doubled);"
+
+            "// Snippet 5: Promise example
+            new Promise((resolve, reject) => {
+              setTimeout(() => resolve('Promise resolved!'), 500);
+            })
+            .then(msg => console.log(msg));"
+
+            "// Snippet 6: Async/await with timeout helper
+            const delay = ms => new Promise(r => setTimeout(r, ms));
+            (async () => {
+              console.log('Waiting...');
+              await delay(300);
+              console.log('Done waiting');
+            })();"
+
+            "// Snippet 7: Class definition and usage
+            class Person {
+              constructor(name) { this.name = name; }
+              greet() { return `Hi, I'm ${this.name}`; }
+            }
+            const p = new Person('Alice');
+            console.log(p.greet());"
+
+            "// Snippet 8: Filter and reduce
+            const nums = [1,2,3,4,5,6];
+            const evens = nums.filter(n => n % 2 === 0);
+            const sum = evens.reduce((a,b) => a + b, 0);
+            console.log('Evens:', evens, 'Sum:', sum);"
+
+            "// Snippet 9: Shuffle an array
+            const shuffle = arr => arr.sort(() => Math.random() - 0.5);
+            console.log('Shuffled:', shuffle([1,2,3,4,5]));"
+
+            "// Snippet 10: Generator example
+            function* gen() { yield 1; yield 2; yield 3; }
+            for (let v of gen()) console.log('gen value', v);"
+
+            "// Snippet 11: Regex search
+            const text = 'The quick brown fox';
+            const match = text.match(/\b\w{5}\b/g);
+            console.log('Words of length 5:', match);"
+
+            "// Snippet 12: Date formatting
+            const now = new Date();
+            console.log('Today is', now.toISOString().split('T')[0]);"
+
+            "// Snippet 13: Recursive Fibonacci
+            function fib(n) { return n < 2 ? n : fib(n-1)+fib(n-2); }
+            console.log('fib(6)=', fib(6));"
+
+            "// Snippet 14: Object destructuring with defaults
+            const {a=1, b=2} = {a: 10};
+            console.log(a, b);"
+          )
+
+          # Pick a random snippet from the array
+          RANDOM_INDEX=$((RANDOM % ${#CODE_SNIPPETS[@]}))
+          SELECTED_CODE="${CODE_SNIPPETS[$RANDOM_INDEX]}"
+
+          # Write the selected code to the new file
+          cat <<EOL > $FILENAME
+          // Daily script generated on $(date)
+          // Randomly selected snippet #$(($RANDOM_INDEX + 1))
+
+          ${SELECTED_CODE}
+          EOL
+
+          echo "Created file: $FILENAME with snippet #$(($RANDOM_INDEX + 1))"
+
+      - name: Commit and push new script
+        run: |
+          git config --global user.name "Automated Script Bot"
+          git config --global user.email "actions@github.com"
+          git add script-*.js
+          if git diff --staged --quiet; then
+            echo "No new script to commit."
+          else
+            git commit -m "feat: Add random daily JS script for $(date '+%Y-%m-%d')"
+            git push
+          fi
