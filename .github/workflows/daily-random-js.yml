@@ -1,0 +1,70 @@
+name: Create Daily JS with Random Code
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight UTC
+  workflow_dispatch:
+
+jobs:
+  create-script:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate daily script with random code
+        run: |
+          FILENAME="script-$(date '+%Y-%m-%d').js"
+
+          # Define an array of different code snippets
+          declare -a CODE_SNIPPETS=(
+            "// Snippet 1: A simple greeting
+            console.log('Hello there! This is a random greeting script.');
+            const user = 'Developer';
+            console.log(\`Welcome, \${user}!\`);"
+
+            "// Snippet 2: A simple number guessing game
+            const targetNumber = Math.floor(Math.random() * 10) + 1;
+            console.log(\`Guess a number between 1 and 10. The answer is \${targetNumber}.\`);"
+
+            "// Snippet 3: Fetch a random fact
+            fetch('https://catfact.ninja/fact')
+              .then(response => response.json())
+              .then(data => console.log('Random Cat Fact:', data.fact))
+              .catch(error => console.error('Error fetching fact:', error));"
+
+            "// Snippet 4: Array manipulation
+            const numbers = [1, 2, 3, 4, 5];
+            const doubled = numbers.map(n => n * 2);
+            console.log('Original:', numbers);
+            console.log('Doubled:', doubled);"
+          )
+
+          # Pick a random snippet from the array
+          RANDOM_INDEX=$((RANDOM % ${#CODE_SNIPPETS[@]}))
+          SELECTED_CODE="${CODE_SNIPPETS[$RANDOM_INDEX]}"
+
+          # Write the selected code to the new file
+          cat <<EOL > $FILENAME
+          // Daily script generated on $(date)
+          // Randomly selected snippet #$(($RANDOM_INDEX + 1))
+
+          ${SELECTED_CODE}
+          EOL
+
+          echo "Created file: $FILENAME with snippet #$(($RANDOM_INDEX + 1))"
+
+      - name: Commit and push new script
+        run: |
+          git config --global user.name "Automated Script Bot"
+          git config --global user.email "actions@github.com"
+          git add script-*.js
+          if git diff --staged --quiet; then
+            echo "No new script to commit."
+          else
+            git commit -m "feat: Add random daily JS script for $(date '+%Y-%m-%d')"
+            git push
+          fi
