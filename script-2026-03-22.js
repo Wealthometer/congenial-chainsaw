@@ -1,6 +1,6 @@
-// Daily script generated on Sun Mar 22 01:22:37 UTC 2026
-// Randomly selected snippet #10
+// Daily script generated on Sun Mar 22 02:06:46 UTC 2026
+// Randomly selected snippet #9
 
-// Snippet 10: Generator example
-  function* gen() { yield 1; yield 2; yield 3; }
-  for (let v of gen()) console.log('gen value', v);
+// Snippet 9: Shuffle an array
+  const shuffle = arr => arr.sort(() => Math.random() - 0.5);
+  console.log('Shuffled:', shuffle([1,2,3,4,5]));
