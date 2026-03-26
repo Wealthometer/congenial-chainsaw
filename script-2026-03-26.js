@@ -1,8 +1,6 @@
-// Daily script generated on Thu Mar 26 01:26:47 UTC 2026
-// Randomly selected snippet #5
+// Daily script generated on Thu Mar 26 02:10:59 UTC 2026
+// Randomly selected snippet #14
 
-// Snippet 5: Promise example
-  new Promise((resolve, reject) => {
-    setTimeout(() => resolve('Promise resolved!'), 500);
-  })
-  .then(msg => console.log(msg));
+// Snippet 14: Object destructuring with defaults
+  const {a=1, b=2} = {a: 10};
+  console.log(a, b);
