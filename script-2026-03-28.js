@@ -1,8 +1,6 @@
-// Daily script generated on Sat Mar 28 01:20:37 UTC 2026
-// Randomly selected snippet #3
+// Daily script generated on Sat Mar 28 02:03:19 UTC 2026
+// Randomly selected snippet #10
 
-// Snippet 3: Fetch a random fact
-  fetch('https://catfact.ninja/fact')
-    .then(response => response.json())
-    .then(data => console.log('Random Cat Fact:', data.fact))
-    .catch(error => console.error('Error fetching fact:', error));
+// Snippet 10: Generator example
+  function* gen() { yield 1; yield 2; yield 3; }
+  for (let v of gen()) console.log('gen value', v);
