@@ -1,8 +1,6 @@
-// Daily script generated on Mon Mar 30 01:45:24 UTC 2026
-// Randomly selected snippet #8
+// Daily script generated on Mon Mar 30 02:25:13 UTC 2026
+// Randomly selected snippet #14
 
-// Snippet 8: Filter and reduce
-  const nums = [1,2,3,4,5,6];
-  const evens = nums.filter(n => n % 2 === 0);
-  const sum = evens.reduce((a,b) => a + b, 0);
-  console.log('Evens:', evens, 'Sum:', sum);
+// Snippet 14: Object destructuring with defaults
+  const {a=1, b=2} = {a: 10};
+  console.log(a, b);
