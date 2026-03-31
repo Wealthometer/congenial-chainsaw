@@ -1,8 +1,6 @@
-// Daily script generated on Tue Mar 31 01:28:03 UTC 2026
-// Randomly selected snippet #3
+// Daily script generated on Tue Mar 31 02:12:34 UTC 2026
+// Randomly selected snippet #13
 
-// Snippet 3: Fetch a random fact
-  fetch('https://catfact.ninja/fact')
-    .then(response => response.json())
-    .then(data => console.log('Random Cat Fact:', data.fact))
-    .catch(error => console.error('Error fetching fact:', error));
+// Snippet 13: Recursive Fibonacci
+  function fib(n) { return n < 2 ? n : fib(n-1)+fib(n-2); }
+  console.log('fib(6)=', fib(6));
