@@ -1,7 +1,8 @@
-// Daily script generated on Sat Apr 11 01:25:00 UTC 2026
-// Randomly selected snippet #11
+// Daily script generated on Sat Apr 11 02:06:55 UTC 2026
+// Randomly selected snippet #8
 
-// Snippet 11: Regex search
-  const text = 'The quick brown fox';
-  const match = text.match(/\b\w{5}\b/g);
-  console.log('Words of length 5:', match);
+// Snippet 8: Filter and reduce
+  const nums = [1,2,3,4,5,6];
+  const evens = nums.filter(n => n % 2 === 0);
+  const sum = evens.reduce((a,b) => a + b, 0);
+  console.log('Evens:', evens, 'Sum:', sum);
