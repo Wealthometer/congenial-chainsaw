@@ -7,4 +7,4 @@
     console.log('Waiting...');
     await delay(300);
     console.log('Done waiting');
-  })();
+  })();.
