@@ -1,8 +1,6 @@
-// Daily script generated on Sun Apr 19 01:52:09 UTC 2026
-// Randomly selected snippet #3
+// Daily script generated on Sun Apr 19 02:34:08 UTC 2026
+// Randomly selected snippet #12
 
-// Snippet 3: Fetch a random fact
-  fetch('https://catfact.ninja/fact')
-    .then(response => response.json())
-    .then(data => console.log('Random Cat Fact:', data.fact))
-    .catch(error => console.error('Error fetching fact:', error));
+// Snippet 12: Date formatting
+  const now = new Date();
+  console.log('Today is', now.toISOString().split('T')[0]);
