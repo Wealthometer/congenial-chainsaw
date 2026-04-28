@@ -1,7 +1,6 @@
-// Daily script generated on Tue Apr 28 02:05:00 UTC 2026
-// Randomly selected snippet #11
+// Daily script generated on Tue Apr 28 02:47:15 UTC 2026
+// Randomly selected snippet #10
 
-// Snippet 11: Regex search
-  const text = 'The quick brown fox';
-  const match = text.match(/\b\w{5}\b/g);
-  console.log('Words of length 5:', match);
+// Snippet 10: Generator example
+  function* gen() { yield 1; yield 2; yield 3; }
+  for (let v of gen()) console.log('gen value', v);
