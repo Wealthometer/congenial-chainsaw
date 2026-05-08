@@ -1,6 +1,6 @@
-// Daily script generated on Fri May  8 02:10:25 UTC 2026
-// Randomly selected snippet #9
+// Daily script generated on Fri May  8 02:48:19 UTC 2026
+// Randomly selected snippet #14
 
-// Snippet 9: Shuffle an array
-  const shuffle = arr => arr.sort(() => Math.random() - 0.5);
-  console.log('Shuffled:', shuffle([1,2,3,4,5]));
+// Snippet 14: Object destructuring with defaults
+  const {a=1, b=2} = {a: 10};
+  console.log(a, b);
