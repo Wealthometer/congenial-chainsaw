@@ -1,6 +1,6 @@
-// Daily script generated on Fri May 15 02:24:54 UTC 2026
-// Randomly selected snippet #14
+// Daily script generated on Fri May 15 02:57:51 UTC 2026
+// Randomly selected snippet #13
 
-// Snippet 14: Object destructuring with defaults
-  const {a=1, b=2} = {a: 10};
-  console.log(a, b);
+// Snippet 13: Recursive Fibonacci
+  function fib(n) { return n < 2 ? n : fib(n-1)+fib(n-2); }
+  console.log('fib(6)=', fib(6));
