@@ -1,8 +1,6 @@
-// Daily script generated on Sun May 17 02:11:31 UTC 2026
-// Randomly selected snippet #8
+// Daily script generated on Sun May 17 02:55:36 UTC 2026
+// Randomly selected snippet #12
 
-// Snippet 8: Filter and reduce
-  const nums = [1,2,3,4,5,6];
-  const evens = nums.filter(n => n % 2 === 0);
-  const sum = evens.reduce((a,b) => a + b, 0);
-  console.log('Evens:', evens, 'Sum:', sum);
+// Snippet 12: Date formatting
+  const now = new Date();
+  console.log('Today is', now.toISOString().split('T')[0]);
