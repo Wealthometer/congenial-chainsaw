@@ -1,6 +1,6 @@
-// Daily script generated on Thu May 21 02:31:55 UTC 2026
-// Randomly selected snippet #2
+// Daily script generated on Thu May 21 03:33:22 UTC 2026
+// Randomly selected snippet #10
 
-// Snippet 2: A simple number guessing game
-  const targetNumber = Math.floor(Math.random() * 10) + 1;
-  console.log(`Guess a number between 1 and 10. The answer is ${targetNumber}.`);
+// Snippet 10: Generator example
+  function* gen() { yield 1; yield 2; yield 3; }
+  for (let v of gen()) console.log('gen value', v);
