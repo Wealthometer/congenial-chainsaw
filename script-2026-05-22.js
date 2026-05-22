@@ -1,7 +1,6 @@
-// Daily script generated on Fri May 22 02:33:53 UTC 2026
-// Randomly selected snippet #1
+// Daily script generated on Fri May 22 03:32:13 UTC 2026
+// Randomly selected snippet #13
 
-// Snippet 1: A simple greeting
-  console.log('Hello there! This is a random greeting script.');
-  const user = 'Developer';
-  console.log(`Welcome, ${user}!`);
+// Snippet 13: Recursive Fibonacci
+  function fib(n) { return n < 2 ? n : fib(n-1)+fib(n-2); }
+  console.log('fib(6)=', fib(6));
