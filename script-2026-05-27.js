@@ -1,6 +1,8 @@
-// Daily script generated on Wed May 27 02:37:14 UTC 2026
-// Randomly selected snippet #9
+// Daily script generated on Wed May 27 03:39:14 UTC 2026
+// Randomly selected snippet #4
 
-// Snippet 9: Shuffle an array
-  const shuffle = arr => arr.sort(() => Math.random() - 0.5);
-  console.log('Shuffled:', shuffle([1,2,3,4,5]));
+// Snippet 4: Array manipulation
+  const numbers = [1, 2, 3, 4, 5];
+  const doubled = numbers.map(n => n * 2);
+  console.log('Original:', numbers);
+  console.log('Doubled:', doubled);
