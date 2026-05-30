@@ -1,8 +1,6 @@
-// Daily script generated on Sat May 30 02:12:58 UTC 2026
-// Randomly selected snippet #8
+// Daily script generated on Sat May 30 02:54:49 UTC 2026
+// Randomly selected snippet #10
 
-// Snippet 8: Filter and reduce
-  const nums = [1,2,3,4,5,6];
-  const evens = nums.filter(n => n % 2 === 0);
-  const sum = evens.reduce((a,b) => a + b, 0);
-  console.log('Evens:', evens, 'Sum:', sum);
+// Snippet 10: Generator example
+  function* gen() { yield 1; yield 2; yield 3; }
+  for (let v of gen()) console.log('gen value', v);
