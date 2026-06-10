@@ -1,6 +1,7 @@
-// Daily script generated on Wed Jun 10 02:36:20 UTC 2026
-// Randomly selected snippet #13
+// Daily script generated on Wed Jun 10 03:35:09 UTC 2026
+// Randomly selected snippet #11
 
-// Snippet 13: Recursive Fibonacci
-  function fib(n) { return n < 2 ? n : fib(n-1)+fib(n-2); }
-  console.log('fib(6)=', fib(6));
+// Snippet 11: Regex search
+  const text = 'The quick brown fox';
+  const match = text.match(/\b\w{5}\b/g);
+  console.log('Words of length 5:', match);
