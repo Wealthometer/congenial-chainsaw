@@ -1,8 +1,6 @@
-// Daily script generated on Fri Jun 12 02:42:26 UTC 2026
-// Randomly selected snippet #8
+// Daily script generated on Fri Jun 12 03:49:23 UTC 2026
+// Randomly selected snippet #2
 
-// Snippet 8: Filter and reduce
-  const nums = [1,2,3,4,5,6];
-  const evens = nums.filter(n => n % 2 === 0);
-  const sum = evens.reduce((a,b) => a + b, 0);
-  console.log('Evens:', evens, 'Sum:', sum);
+// Snippet 2: A simple number guessing game
+  const targetNumber = Math.floor(Math.random() * 10) + 1;
+  console.log(`Guess a number between 1 and 10. The answer is ${targetNumber}.`);
