@@ -1,6 +1,10 @@
-// Daily script generated on Wed Jun 17 02:49:30 UTC 2026
-// Randomly selected snippet #2
+// Daily script generated on Wed Jun 17 03:58:41 UTC 2026
+// Randomly selected snippet #6
 
-// Snippet 2: A simple number guessing game
-  const targetNumber = Math.floor(Math.random() * 10) + 1;
-  console.log(`Guess a number between 1 and 10. The answer is ${targetNumber}.`);
+// Snippet 6: Async/await with timeout helper
+  const delay = ms => new Promise(r => setTimeout(r, ms));
+  (async () => {
+    console.log('Waiting...');
+    await delay(300);
+    console.log('Done waiting');
+  })();
