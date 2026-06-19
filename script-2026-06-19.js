@@ -1,6 +1,6 @@
-// Daily script generated on Fri Jun 19 03:29:20 UTC 2026
-// Randomly selected snippet #14
+// Daily script generated on Fri Jun 19 04:09:33 UTC 2026
+// Randomly selected snippet #10
 
-// Snippet 14: Object destructuring with defaults
-  const {a=1, b=2} = {a: 10};
-  console.log(a, b);
+// Snippet 10: Generator example
+  function* gen() { yield 1; yield 2; yield 3; }
+  for (let v of gen()) console.log('gen value', v);
