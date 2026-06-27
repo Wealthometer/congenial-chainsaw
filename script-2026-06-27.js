@@ -1,6 +1,6 @@
-// Daily script generated on Sat Jun 27 02:26:39 UTC 2026
-// Randomly selected snippet #13
+// Daily script generated on Sat Jun 27 02:55:57 UTC 2026
+// Randomly selected snippet #12
 
-// Snippet 13: Recursive Fibonacci
-  function fib(n) { return n < 2 ? n : fib(n-1)+fib(n-2); }
-  console.log('fib(6)=', fib(6));
+// Snippet 12: Date formatting
+  const now = new Date();
+  console.log('Today is', now.toISOString().split('T')[0]);
