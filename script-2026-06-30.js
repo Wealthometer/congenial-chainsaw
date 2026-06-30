@@ -1,8 +1,10 @@
-// Daily script generated on Tue Jun 30 02:33:44 UTC 2026
-// Randomly selected snippet #4
+// Daily script generated on Tue Jun 30 03:31:45 UTC 2026
+// Randomly selected snippet #6
 
-// Snippet 4: Array manipulation
-  const numbers = [1, 2, 3, 4, 5];
-  const doubled = numbers.map(n => n * 2);
-  console.log('Original:', numbers);
-  console.log('Doubled:', doubled);
+// Snippet 6: Async/await with timeout helper
+  const delay = ms => new Promise(r => setTimeout(r, ms));
+  (async () => {
+    console.log('Waiting...');
+    await delay(300);
+    console.log('Done waiting');
+  })();
