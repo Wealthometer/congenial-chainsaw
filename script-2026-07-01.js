@@ -1,8 +1,6 @@
-// Daily script generated on Wed Jul  1 02:39:57 UTC 2026
-// Randomly selected snippet #5
+// Daily script generated on Wed Jul  1 03:40:12 UTC 2026
+// Randomly selected snippet #13
 
-// Snippet 5: Promise example
-  new Promise((resolve, reject) => {
-    setTimeout(() => resolve('Promise resolved!'), 500);
-  })
-  .then(msg => console.log(msg));
+// Snippet 13: Recursive Fibonacci
+  function fib(n) { return n < 2 ? n : fib(n-1)+fib(n-2); }
+  console.log('fib(6)=', fib(6));
