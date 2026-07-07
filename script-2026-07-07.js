@@ -1,8 +1,10 @@
-// Daily script generated on Tue Jul  7 02:11:09 UTC 2026
-// Randomly selected snippet #8
+// Daily script generated on Tue Jul  7 02:55:46 UTC 2026
+// Randomly selected snippet #6
 
-// Snippet 8: Filter and reduce
-  const nums = [1,2,3,4,5,6];
-  const evens = nums.filter(n => n % 2 === 0);
-  const sum = evens.reduce((a,b) => a + b, 0);
-  console.log('Evens:', evens, 'Sum:', sum);
+// Snippet 6: Async/await with timeout helper
+  const delay = ms => new Promise(r => setTimeout(r, ms));
+  (async () => {
+    console.log('Waiting...');
+    await delay(300);
+    console.log('Done waiting');
+  })();
