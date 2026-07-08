@@ -1,7 +1,6 @@
-// Daily script generated on Wed Jul  8 01:51:40 UTC 2026
-// Randomly selected snippet #11
+// Daily script generated on Wed Jul  8 02:32:12 UTC 2026
+// Randomly selected snippet #12
 
-// Snippet 11: Regex search
-  const text = 'The quick brown fox';
-  const match = text.match(/\b\w{5}\b/g);
-  console.log('Words of length 5:', match);
+// Snippet 12: Date formatting
+  const now = new Date();
+  console.log('Today is', now.toISOString().split('T')[0]);
