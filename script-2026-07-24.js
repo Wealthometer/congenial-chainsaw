@@ -1,6 +1,6 @@
-// Daily script generated on Fri Jul 24 01:52:41 UTC 2026
-// Randomly selected snippet #12
+// Daily script generated on Fri Jul 24 02:31:15 UTC 2026
+// Randomly selected snippet #14
 
-// Snippet 12: Date formatting
-  const now = new Date();
-  console.log('Today is', now.toISOString().split('T')[0]);
+// Snippet 14: Object destructuring with defaults
+  const {a=1, b=2} = {a: 10};
+  console.log(a, b);
