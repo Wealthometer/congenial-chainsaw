@@ -1,6 +1,10 @@
-// Daily script generated on Sat Jul 25 01:52:16 UTC 2026
-// Randomly selected snippet #12
+// Daily script generated on Sat Jul 25 02:29:21 UTC 2026
+// Randomly selected snippet #6
 
-// Snippet 12: Date formatting
-  const now = new Date();
-  console.log('Today is', now.toISOString().split('T')[0]);
+// Snippet 6: Async/await with timeout helper
+  const delay = ms => new Promise(r => setTimeout(r, ms));
+  (async () => {
+    console.log('Waiting...');
+    await delay(300);
+    console.log('Done waiting');
+  })();
