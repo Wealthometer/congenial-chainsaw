@@ -1,8 +1,6 @@
-// Daily script generated on Sun Aug  9 01:01:07 UTC 2026
-// Randomly selected snippet #4
+// Daily script generated on Sun Aug  9 01:35:39 UTC 2026
+// Randomly selected snippet #10
 
-// Snippet 4: Array manipulation
-  const numbers = [1, 2, 3, 4, 5];
-  const doubled = numbers.map(n => n * 2);
-  console.log('Original:', numbers);
-  console.log('Doubled:', doubled);
+// Snippet 10: Generator example
+  function* gen() { yield 1; yield 2; yield 3; }
+  for (let v of gen()) console.log('gen value', v);
