@@ -1,6 +1,8 @@
-// Daily script generated on Sat Aug 15 00:42:53 UTC 2026
-// Randomly selected snippet #13
+// Daily script generated on Sat Aug 15 01:06:24 UTC 2026
+// Randomly selected snippet #8
 
-// Snippet 13: Recursive Fibonacci
-  function fib(n) { return n < 2 ? n : fib(n-1)+fib(n-2); }
-  console.log('fib(6)=', fib(6));
+// Snippet 8: Filter and reduce
+  const nums = [1,2,3,4,5,6];
+  const evens = nums.filter(n => n % 2 === 0);
+  const sum = evens.reduce((a,b) => a + b, 0);
+  console.log('Evens:', evens, 'Sum:', sum);
