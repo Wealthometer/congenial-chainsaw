@@ -1,8 +1,6 @@
-// Daily script generated on Wed Aug 19 00:42:20 UTC 2026
-// Randomly selected snippet #4
+// Daily script generated on Wed Aug 19 01:06:52 UTC 2026
+// Randomly selected snippet #14
 
-// Snippet 4: Array manipulation
-  const numbers = [1, 2, 3, 4, 5];
-  const doubled = numbers.map(n => n * 2);
-  console.log('Original:', numbers);
-  console.log('Doubled:', doubled);
+// Snippet 14: Object destructuring with defaults
+  const {a=1, b=2} = {a: 10};
+  console.log(a, b);
