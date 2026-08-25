@@ -1,6 +1,6 @@
-// Daily script generated on Tue Aug 25 00:43:36 UTC 2026
-// Randomly selected snippet #13
+// Daily script generated on Tue Aug 25 01:08:09 UTC 2026
+// Randomly selected snippet #10
 
-// Snippet 13: Recursive Fibonacci
-  function fib(n) { return n < 2 ? n : fib(n-1)+fib(n-2); }
-  console.log('fib(6)=', fib(6));
+// Snippet 10: Generator example
+  function* gen() { yield 1; yield 2; yield 3; }
+  for (let v of gen()) console.log('gen value', v);
