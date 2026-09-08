@@ -1,6 +1,10 @@
-// Daily script generated on Tue Sep  8 02:12:56 UTC 2026
-// Randomly selected snippet #10
+// Daily script generated on Tue Sep  8 03:06:35 UTC 2026
+// Randomly selected snippet #6
 
-// Snippet 10: Generator example
-  function* gen() { yield 1; yield 2; yield 3; }
-  for (let v of gen()) console.log('gen value', v);
+// Snippet 6: Async/await with timeout helper
+  const delay = ms => new Promise(r => setTimeout(r, ms));
+  (async () => {
+    console.log('Waiting...');
+    await delay(300);
+    console.log('Done waiting');
+  })();
