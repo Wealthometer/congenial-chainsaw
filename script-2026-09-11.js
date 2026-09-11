@@ -1,8 +1,8 @@
-// Daily script generated on Fri Sep 11 02:11:10 UTC 2026
-// Randomly selected snippet #5
+// Daily script generated on Fri Sep 11 03:03:36 UTC 2026
+// Randomly selected snippet #4
 
-// Snippet 5: Promise example
-  new Promise((resolve, reject) => {
-    setTimeout(() => resolve('Promise resolved!'), 500);
-  })
-  .then(msg => console.log(msg));
+// Snippet 4: Array manipulation
+  const numbers = [1, 2, 3, 4, 5];
+  const doubled = numbers.map(n => n * 2);
+  console.log('Original:', numbers);
+  console.log('Doubled:', doubled);
