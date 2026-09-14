@@ -1,6 +1,6 @@
-// Daily script generated on Mon Sep 14 02:32:11 UTC 2026
-// Randomly selected snippet #2
+// Daily script generated on Mon Sep 14 03:25:41 UTC 2026
+// Randomly selected snippet #14
 
-// Snippet 2: A simple number guessing game
-  const targetNumber = Math.floor(Math.random() * 10) + 1;
-  console.log(`Guess a number between 1 and 10. The answer is ${targetNumber}.`);
+// Snippet 14: Object destructuring with defaults
+  const {a=1, b=2} = {a: 10};
+  console.log(a, b);
