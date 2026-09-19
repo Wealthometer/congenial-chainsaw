@@ -1,8 +1,8 @@
-// Daily script generated on Sat Sep 19 02:22:32 UTC 2026
-// Randomly selected snippet #4
+// Daily script generated on Sat Sep 19 03:11:08 UTC 2026
+// Randomly selected snippet #8
 
-// Snippet 4: Array manipulation
-  const numbers = [1, 2, 3, 4, 5];
-  const doubled = numbers.map(n => n * 2);
-  console.log('Original:', numbers);
-  console.log('Doubled:', doubled);
+// Snippet 8: Filter and reduce
+  const nums = [1,2,3,4,5,6];
+  const evens = nums.filter(n => n % 2 === 0);
+  const sum = evens.reduce((a,b) => a + b, 0);
+  console.log('Evens:', evens, 'Sum:', sum);
