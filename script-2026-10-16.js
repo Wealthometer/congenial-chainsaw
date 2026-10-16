@@ -1,6 +1,8 @@
-// Daily script generated on Fri Oct 16 02:23:09 UTC 2026
-// Randomly selected snippet #2
+// Daily script generated on Fri Oct 16 03:10:30 UTC 2026
+// Randomly selected snippet #4
 
-// Snippet 2: A simple number guessing game
-  const targetNumber = Math.floor(Math.random() * 10) + 1;
-  console.log(`Guess a number between 1 and 10. The answer is ${targetNumber}.`);
+// Snippet 4: Array manipulation
+  const numbers = [1, 2, 3, 4, 5];
+  const doubled = numbers.map(n => n * 2);
+  console.log('Original:', numbers);
+  console.log('Doubled:', doubled);
