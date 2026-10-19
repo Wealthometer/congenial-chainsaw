@@ -1,8 +1,6 @@
-// Daily script generated on Mon Oct 19 02:31:09 UTC 2026
-// Randomly selected snippet #5
+// Daily script generated on Mon Oct 19 03:18:18 UTC 2026
+// Randomly selected snippet #12
 
-// Snippet 5: Promise example
-  new Promise((resolve, reject) => {
-    setTimeout(() => resolve('Promise resolved!'), 500);
-  })
-  .then(msg => console.log(msg));
+// Snippet 12: Date formatting
+  const now = new Date();
+  console.log('Today is', now.toISOString().split('T')[0]);
