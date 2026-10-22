@@ -1,6 +1,6 @@
-// Daily script generated on Thu Oct 22 02:35:21 UTC 2026
-// Randomly selected snippet #12
+// Daily script generated on Thu Oct 22 03:20:16 UTC 2026
+// Randomly selected snippet #10
 
-// Snippet 12: Date formatting
-  const now = new Date();
-  console.log('Today is', now.toISOString().split('T')[0]);
+// Snippet 10: Generator example
+  function* gen() { yield 1; yield 2; yield 3; }
+  for (let v of gen()) console.log('gen value', v);
