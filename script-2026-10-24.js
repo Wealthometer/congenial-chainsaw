@@ -1,6 +1,8 @@
-// Daily script generated on Sat Oct 24 02:37:30 UTC 2026
-// Randomly selected snippet #9
+// Daily script generated on Sat Oct 24 03:19:44 UTC 2026
+// Randomly selected snippet #8
 
-// Snippet 9: Shuffle an array
-  const shuffle = arr => arr.sort(() => Math.random() - 0.5);
-  console.log('Shuffled:', shuffle([1,2,3,4,5]));
+// Snippet 8: Filter and reduce
+  const nums = [1,2,3,4,5,6];
+  const evens = nums.filter(n => n % 2 === 0);
+  const sum = evens.reduce((a,b) => a + b, 0);
+  console.log('Evens:', evens, 'Sum:', sum);
