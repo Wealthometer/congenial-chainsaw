@@ -1,8 +1,6 @@
-// Daily script generated on Wed Oct 28 03:11:47 UTC 2026
-// Randomly selected snippet #5
+// Daily script generated on Wed Oct 28 04:01:40 UTC 2026
+// Randomly selected snippet #10
 
-// Snippet 5: Promise example
-  new Promise((resolve, reject) => {
-    setTimeout(() => resolve('Promise resolved!'), 500);
-  })
-  .then(msg => console.log(msg));
+// Snippet 10: Generator example
+  function* gen() { yield 1; yield 2; yield 3; }
+  for (let v of gen()) console.log('gen value', v);
