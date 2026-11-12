@@ -1,8 +1,8 @@
-// Daily script generated on Thu Nov 12 04:59:44 UTC 2026
-// Randomly selected snippet #3
+// Daily script generated on Thu Nov 12 05:47:46 UTC 2026
+// Randomly selected snippet #8
 
-// Snippet 3: Fetch a random fact
-  fetch('https://catfact.ninja/fact')
-    .then(response => response.json())
-    .then(data => console.log('Random Cat Fact:', data.fact))
-    .catch(error => console.error('Error fetching fact:', error));
+// Snippet 8: Filter and reduce
+  const nums = [1,2,3,4,5,6];
+  const evens = nums.filter(n => n % 2 === 0);
+  const sum = evens.reduce((a,b) => a + b, 0);
+  console.log('Evens:', evens, 'Sum:', sum);
