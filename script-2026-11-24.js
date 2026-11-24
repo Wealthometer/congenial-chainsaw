@@ -1,8 +1,8 @@
-// Daily script generated on Tue Nov 24 07:41:50 UTC 2026
-// Randomly selected snippet #4
+// Daily script generated on Tue Nov 24 08:26:23 UTC 2026
+// Randomly selected snippet #3
 
-// Snippet 4: Array manipulation
-  const numbers = [1, 2, 3, 4, 5];
-  const doubled = numbers.map(n => n * 2);
-  console.log('Original:', numbers);
-  console.log('Doubled:', doubled);
+// Snippet 3: Fetch a random fact
+  fetch('https://catfact.ninja/fact')
+    .then(response => response.json())
+    .then(data => console.log('Random Cat Fact:', data.fact))
+    .catch(error => console.error('Error fetching fact:', error));
