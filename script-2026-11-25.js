@@ -1,6 +1,6 @@
-// Daily script generated on Wed Nov 25 06:12:02 UTC 2026
-// Randomly selected snippet #9
+// Daily script generated on Wed Nov 25 07:01:14 UTC 2026
+// Randomly selected snippet #12
 
-// Snippet 9: Shuffle an array
-  const shuffle = arr => arr.sort(() => Math.random() - 0.5);
-  console.log('Shuffled:', shuffle([1,2,3,4,5]));
+// Snippet 12: Date formatting
+  const now = new Date();
+  console.log('Today is', now.toISOString().split('T')[0]);
