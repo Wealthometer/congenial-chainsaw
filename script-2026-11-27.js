@@ -1,10 +1,7 @@
-// Daily script generated on Fri Nov 27 05:56:12 UTC 2026
-// Randomly selected snippet #6
+// Daily script generated on Fri Nov 27 06:46:24 UTC 2026
+// Randomly selected snippet #11
 
-// Snippet 6: Async/await with timeout helper
-  const delay = ms => new Promise(r => setTimeout(r, ms));
-  (async () => {
-    console.log('Waiting...');
-    await delay(300);
-    console.log('Done waiting');
-  })();
+// Snippet 11: Regex search
+  const text = 'The quick brown fox';
+  const match = text.match(/\b\w{5}\b/g);
+  console.log('Words of length 5:', match);
